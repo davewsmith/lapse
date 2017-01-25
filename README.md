@@ -6,7 +6,7 @@ Lapso is a command-line app that provides UI that can be accessed from a browser
 
 ## Status
 
-Lapse is a working rough draft. I'm developing it to scratch a personal itch.  At the moment, stitching pics together to make the time-lapse video is done manually. Eventually, it will invoke `mencoder`. 
+Lapse is a working rough draft. I'm developing it to scratch a personal itch.  At the moment, stitching pics together to make the time-lapse video is done manually. Eventually, Lapse will invoke `mencoder`.
 
 The presentation needs work.
 
@@ -50,7 +50,7 @@ Clicking on the image will refresh it, allowing you to adjust the camera positio
 
 *Delay* is the amount of time to delay before starting to record. A simple number is interepreted as seconds. Appending 'h', 'm', or 's' specifies hours, minutes, and seconds, respectively. These can combined. `1h 30m` will delay for an hour and a half before beginning to record.
 
-*Record* is the length of time to record. "12h" will record for half a day.
+*Record* is the length of time to record. `12h` will record for half a day.
 
 *Sec/Pic* is the the number of seconds between each picture. A Raspberry Pi 3 is just fast enough to record 1 medium-sized JPEG per second to fast media (e.g., a good class 10 SD card or a fast thumb drive). If you notice stuttering in the final video, try a larger number.
 
