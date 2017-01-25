@@ -44,7 +44,23 @@ Then,
 
 starts the app. From a browser elsewhere on your intranet, visit http://yourpi:5000/
 
-At present, there are some settings in `lapse.py` that need manual adjustment.
+Clicking on the image will refresh it, allowing you to adjust the camera position to your liking before starting collection.
+
+*Path Prefix* is the path to where images will be saved, plus a prefix. The path must exist. A timestamp and ".jpg" are appended to the prefix for each image saved.
+
+*Delay* is the amount of time to delay before starting to record. A simple number is interepreted as seconds. Appending 'h', 'm', or 's' specifies hours, minutes, and seconds, respectively. These can combined. `1h 30m` will delay for an hour and a half before beginning to record.
+
+*Record* is the length of time to record. "12h" will record for half a day.
+
+*Sec/Pic* is the the number of seconds between each picture. A Raspberry Pi 3 is just fast enough to record 1 medium-sized JPEG per second to fast media (e.g., a good class 10 SD card or a fast thumb drive). If you notice stuttering in the final video, try a larger number.
+
+Make sure you have sufficient storage for the number of images that you'll be capturing.
+
+Click *Start* to begin.
+
+After the Delay + Record time has elapsed, quit the lapse via `/quit` from a remote browser, and use `mencoder` or the tool of your choice to convert the images into a video.
+
+There are some settings in `lapse.py` that may need manual adjustment. Consult the code. These may be exposed through the UI in the future.
 
 ## License
 
