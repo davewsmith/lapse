@@ -62,6 +62,10 @@ After the Delay + Record time has elapsed, quit the lapse via `/quit` from a rem
 
 There are some settings in `lapse.py` that may need manual adjustment. Consult the code. These may be exposed through the UI in the future.
 
+## Credits
+
+I borrowed serveral ideas. Credits are in the source.
+
 ## License
 
 MIT
