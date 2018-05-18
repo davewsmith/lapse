@@ -2,7 +2,7 @@
 
 Lapse reduces the hassle of setting up a time-lapse shoot from a headless Raspberry Pi.
 
-Lapso is a command-line app that provides UI that can be accessed from a browser elsewhere on your intranet.
+Lapse is a command-line app that provides UI that can be accessed from a browser elsewhere on your intranet.
 
 ## Status
 
