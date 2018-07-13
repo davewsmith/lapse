@@ -21,9 +21,10 @@ def main():
     # TODO set these from command-line options
     resolution = 'medium'
 
-    # TODO these can also be 'png'/'png', but the picamera has an onboard JPEG encoder
-    image_format = 'jpeg'
-    file_suffix = 'jpg'
+    # image_format = 'jpeg'
+    # file_suffix = 'jpg'
+    image_format = 'png'
+    file_suffix = 'png'
 
     control = Control()
     camera = Camera(resolution=resolution, image_format=image_format)
@@ -47,7 +48,7 @@ def main():
 
             while control.recording() and secs_to_delay > 0:
                 # warm the camera up
-                jpg_bits = camera.capture_jpg_bits()
+                jpg_bits = camera.capture_image_bits()
                 (_, f) = divmod(time.time(), 1)
                 time.sleep(1.0 - f)
                 secs_to_delay -= 1
@@ -56,7 +57,7 @@ def main():
             while control.recording() and secs_to_record > 0:
                 start = time.time()
 
-                jpg_bits = camera.capture_jpg_bits()
+                jpg_bits = camera.capture_image_bits()
                 delta_capture = time.time() - start
 
                 save_start = time.time()
