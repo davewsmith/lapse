@@ -24,12 +24,30 @@ except:
     except:
         assert False, "Camera support not available"
 
-
-# TODO revisit for picamera v2
+# See https://picamera.readthedocs.io/en/release-1.13/fov.html#sensor-modes
 RESOLUTION = {
-    'high': (1280,720),
-    'medium': (640,480),
-    'low': (320,240),
+    # full frame
+    'v1native': (2592, 1944),
+    'v1binned': (1296, 792),
+    'v1binnedsmall': (640, 480),
+
+    # decreasing order of frame size
+    'v1mode5': (1296, 730),
+    'v1mode1': (1920, 1080),
+
+    # full frame
+    'v2native': (3280, 2464),
+    'v2binned': (1640, 1232),
+
+    # in decreasing order of frame size
+    'v2mode5': (1640, 922),
+    'v2mode6': (1280, 720),
+    'v2mode1': (1920, 1080),
+    'v2mode7': (640, 480),  # Note: narrower than v1
+
+    # mostly here for laptop webcam
+    'medium': (640, 480),
+    'low': (320, 240),
 }
 
 # The Pi Camera can use an on-chip JPG-encoder, which is faster but grainier
