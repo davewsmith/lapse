@@ -64,7 +64,7 @@ There are some settings in `lapse.py` that may need manual adjustment. Consult t
 
 ## Credits
 
-I borrowed serveral ideas. Credits are in the source.
+I borrowed from several sources. Credits are in the source.
 
 ## License
 
